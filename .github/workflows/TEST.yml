@@ -12,6 +12,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - run: echo "$PATH"
+      - run: brew install sass/sass/sass
+      - run: sass --version
       - run: mkdir -p path/to/artifact
       - run: echo hello > path/to/artifact/world.txt
       - uses: actions/upload-artifact@v3
