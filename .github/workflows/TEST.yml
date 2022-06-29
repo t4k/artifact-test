@@ -12,7 +12,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - run: echo "$PATH"
-      - run: brew install sass/sass/sass
+#       - run: brew install sass/sass/sass
+      - run: curl --silent --location https://github.com/sass/dart-sass/releases/download/1.53.0/dart-sass-1.53.0-linux-x64.tar.gz | tar --extract --gzip
+      - run: mv dart-sass/sass /usr/local/bin
       - run: sass --version
       - run: mkdir -p path/to/artifact
       - run: echo hello > path/to/artifact/world.txt
